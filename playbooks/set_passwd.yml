@@ -1,0 +1,10 @@
+---
+- name: Set password
+  hosts: all
+
+  tasks:
+  - name: Set passwd
+    user:
+      name: shaan
+      update_password: always
+      password: "{{'abcd1234' | password_hash('sha512')}}" #Dont forget to set a highly secured password, avoid assigning common keyword or generic type password.....
