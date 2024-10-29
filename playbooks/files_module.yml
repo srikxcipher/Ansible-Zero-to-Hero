@@ -1,0 +1,17 @@
+---
+- name: File module
+  hosts: all
+
+  tasks:
+    - name: Creating a file
+      file:
+        path: /tmp/newfile.txt
+        state: touch #For deleting a file change the state to -> absent
+        owner: srikant
+        group: srikant
+        mode: u=rwx,g=rw,o=r
+
+    - name: Creating a directory
+      file:
+        path: /tmp/MyFolder1
+        state: directory
