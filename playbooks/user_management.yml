@@ -1,0 +1,17 @@
+---
+- name: User management
+  hosts: all
+
+  tasks:
+  - name: User Creation
+    user:
+      name: shaan
+      comment: new user added   # Optional...
+      shell: /bin/bash
+      groups: QA,srikant # Ensure group exists on the remote server , Use groups for assigning user to multiple groups
+
+  - name: User Deletion
+    user:
+      name: shaan
+      state: absent
+      remove: yes
