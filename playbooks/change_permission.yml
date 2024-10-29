@@ -1,0 +1,9 @@
+---
+- name: Change permission
+  hosts: all
+
+  tasks:
+  - name: Modifying file permissions
+    file:
+      path: /tmp/file1.txt
+      mode: u=rwx,g=rw,o=r
