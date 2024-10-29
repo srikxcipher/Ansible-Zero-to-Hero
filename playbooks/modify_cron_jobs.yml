@@ -1,0 +1,10 @@
+---
+- name: Modifying active cron jobs
+  hosts: all
+
+  tasks:
+  - name: Remove cron job
+    cron:
+      name: Run test script # Provide the exact same name of the cron job running !
+      state: absent
+      user: srikant
