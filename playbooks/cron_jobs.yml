@@ -1,0 +1,16 @@
+---
+- name: Cron job setup
+  hosts: all
+
+  tasks:
+  - name: Add Cron jobs
+    cron:
+      name: Run test script
+      minute: 30
+      hour: 18
+      day: 15
+      month: "*"
+      weekday: "*"
+      user: srikant
+      job: /tmp/scripts/test.sh
+      disabled: yes # Use this option to temporary disable cron jobs
