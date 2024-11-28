@@ -1,0 +1,14 @@
+
+---
+- name: Download files
+  hosts: all
+
+
+  tasks:
+  - name: Download file
+    get_url:
+      url: https://www.url.com
+      dest: /tmp/script/
+      owner: srikant
+      group: srikant
+      mode: 0777
