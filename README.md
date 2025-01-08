@@ -1,4 +1,4 @@
-# Ansible Zero to Hero
+# Levelup Automation Using Ansible 🤖
 
 Welcome to the **Ansible Zero to Hero** repository! This guide will take you from the basics of Ansible to advanced usage, providing all the essential information and steps required to effectively use Ansible for automation.
 
